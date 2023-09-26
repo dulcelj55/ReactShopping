@@ -4,9 +4,11 @@ export const primaryContext= createContext();
 
 const PrimaryProvider = (props) => {
     const [products, setProducts] = useState([]);
-console.log(products)
+    const [cart, setCart] = useState([]);
+console.log({cart})
     return (
-        <primaryContext.Provider value= {{products,setProducts}}>
+        <primaryContext.Provider value= {{
+            products,setProducts, cart, setCart}}>
 
 {props.children}
         </primaryContext.Provider>
